@@ -1,0 +1,27 @@
+.navb{
+    list-style-position: inside;
+    background-color: aqua;
+    list-style: none;
+    display: flex;  
+}
+
+.navb li{
+    display: inline-block;
+    padding: 5px;
+    margin: 5px;
+}
+section{
+    padding: 0px;
+}
+
+aside{
+    float: right;
+    position : relative;
+    background-color: aqua;
+    color: white;
+    
+    margin-right: 100px;
+}
+article{
+    position:fixed;
+}
