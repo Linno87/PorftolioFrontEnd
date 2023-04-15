@@ -14,7 +14,7 @@ const resultado = function (n1, n2, n3){
      return "Por favor, verifique los datos ingresados";
     }
 
-    const operacion = ["sumar", "restar", "multiplicar", "dividir", "modulo","raiz", "+", "-", "*", "/", "%"];
+    const operacion = ["sumar", "restar", "multiplicar", "dividir", "modulo","raiz","potencia","^", "+", "-", "*", "/", "%"];
     if(!operacion.includes(n2)){
         if( isNaN(n2) ){
             return "Operacion no valida";
@@ -41,6 +41,10 @@ const resultado = function (n1, n2, n3){
 
     if(n2==="raiz"){
         return operaciones.raiz(n1, n3);
+    }
+
+    if(n2==="potencia" || n2==="^"){
+        return operaciones.potencia(n1, n3);
     }
 
 }

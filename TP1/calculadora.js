@@ -23,6 +23,9 @@ function raiz(a, b) {
     return a ** (1/b);
 }
 
+function potencia(a, b) {
+    return a ** b;
+}
 
 
 
@@ -35,4 +38,5 @@ module.exports = {
     division,
     modulo,
     raiz,
+    potencia,
 }
