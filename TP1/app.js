@@ -11,10 +11,10 @@ let numeroDos = +process.argv[4]
 const resultado = function (n1, n2, n3){
 
     if( isNaN(n1)|| isNaN(n3) ){
-     return "Por favor, ingrese caracteres numericos";
+     return "Por favor, verifique los datos ingresados";
     }
 
-    const operacion = ["suma", "resta", "multiplicacion", "division", "modulo", "+", "-", "*", "/", "%"];
+    const operacion = ["sumar", "restar", "multiplicar", "dividir", "modulo","raiz", "+", "-", "*", "/", "%"];
     if(!operacion.includes(n2)){
         if( isNaN(n2) ){
             return "Operacion no valida";
@@ -22,16 +22,16 @@ const resultado = function (n1, n2, n3){
             return "El formato debe ser ´A Operacion B´ ";
         }
     }
-    if(n2 === "suma" || n2==="+"){
+    if(n2 === "sumar" || n2==="+"){
         return operaciones.suma(n1, n3);
     }
-    if(n2==="resta" || n2==="-"){
+    if(n2==="restar" || n2==="-"){
         return operaciones.resta(n1, n3);
     }
-    if(n2==="multiplicacion" || n2==="*"){
+    if(n2==="multiplicar" || n2==="*"){
         return operaciones.multiplicacion(n1, n3);
     }
-    if(n2==="division" || n2==="/"){
+    if(n2==="dividir" || n2==="/"){
         return operaciones.division(n1, n3);
     }
     
@@ -39,9 +39,18 @@ const resultado = function (n1, n2, n3){
         return operaciones.modulo(n1, n3);
     }
 
+    if(n2==="raiz"){
+        return operaciones.raiz(n1, n3);
+    }
+
 }
 const result = resultado(numeroUno,operacionARealizar, numeroDos);
-console.log(result)
+if(isNaN(result)){
+    console.log(result);
+}else{
+    console.log(numeroUno +" "+operacionARealizar+" "+numeroDos+" = "+ result)
+}
+
 
 
 

@@ -19,6 +19,10 @@ function modulo(a, b) {
     return a % b;
 }
 
+function raiz(a, b) {
+    return a ** (1/b);
+}
+
 
 
 
@@ -30,4 +34,5 @@ module.exports = {
     multiplicacion,
     division,
     modulo,
+    raiz,
 }
