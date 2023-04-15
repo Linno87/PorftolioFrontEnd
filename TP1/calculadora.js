@@ -27,6 +27,26 @@ function potencia(a, b) {
     return a ** b;
 }
 
+function sumarFraccion(a, b) {
+    const numerador1 = +a[0];
+    
+    const denominador1 = +a[2];
+    
+    const numerador2 = +b[0];
+    
+    const denominador2 = +b[2];
+    
+
+    const denominador = denominador1 * denominador2;
+    const numeradorUnoSuma = multiplicacion(division(denominador,denominador1),numerador1);
+    const numeradorDosSuma = multiplicacion(division(denominador,denominador2),numerador2);
+    const numerador = suma(numeradorUnoSuma,numeradorDosSuma);
+    const resultado = numerador+"/"+denominador;
+
+    
+    return resultado;
+
+}
 
 
 
@@ -39,4 +59,5 @@ module.exports = {
     modulo,
     raiz,
     potencia,
+    sumarFraccion,
 }
