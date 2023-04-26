@@ -14,10 +14,10 @@ switch (accion) {
     case "agregar":
         const arrayVeri = ["terminada","en progreso","pendiente", undefined]
         const boolPertenece = arrayVeri.includes(estadoTarea);
-        if(nombreTarea===undefined || !boolPertenece){
+        if(nombreTarea===undefined || estadoTarea===undefined || !boolPertenece){
             console.log("Debe ingresar el nombre y el estado de la tarea");
             if(!boolPertenece){
-                console.log("El estado de la tarea no es válido");
+                console.log("Recuerde, el estado de la tarea debe ser terminada, pendiente o en progreso");
             }
             
         }else {

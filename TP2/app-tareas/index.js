@@ -23,7 +23,7 @@ module.exports = {
     listarJSON : (arrayList) => {
         const array = arrayList ? arrayList :leerJSON();
         for (let i= 0; i<array.length; i++) {
-            console.log(`${i+1}.- La tarea ${array[i].nombre} se encuentra ${array[i].estado}`)  
+            console.log(`${i+1}.  ${array[i].nombre} - ${array[i].estado}`)  
         }
     },
     leerJSON,
