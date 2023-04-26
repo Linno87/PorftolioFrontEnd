@@ -3,7 +3,8 @@ const fs = require('fs');
 
 
 function leerJSON(){
-    const archivo = fs.readFileSync('./app-tareas/tareas.json', 'utf8')
+    let archivo = fs.readFileSync('./app-tareas/tareas.json', 'utf8')
+    archivo = parsearJSON(archivo);
     return archivo
 }
 
@@ -14,17 +15,20 @@ function parsearJSON(archivo){
 function escribirJSON(arrayTarea){
     const archivo =  JSON.stringify(arrayTarea,null,3)
     fs.writeFileSync('./app-tareas/tareas.json',archivo, "utf-8");
-    arrayTarea = parsearJSON(leerJSON());
+    arrayTarea = leerJSON();
     return arrayTarea;
 }
 
 module.exports = {
-    listarJSON : () => {
-        const arrayTarea = parsearJSON(leerJSON())
-        return arrayTarea;
+    listarJSON : (arrayList) => {
+        const array = arrayList ? arrayList :leerJSON();
+        for (let i= 0; i<array.length; i++) {
+            console.log(`${i+1}.- La tarea ${array[i].nombre} se encuentra ${array[i].estado}`)  
+        }
     },
+    leerJSON,
     guardarJSON: (tarea) => {
-        const  arrayTarea = parsearJSON(leerJSON());
+        const  arrayTarea = leerJSON();
         arrayTarea.push(tarea);
         const nuevoArchivo =  escribirJSON(arrayTarea);
         return nuevoArchivo;

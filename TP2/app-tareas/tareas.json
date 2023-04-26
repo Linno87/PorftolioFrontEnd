@@ -10,5 +10,22 @@
    {
       "nombre": "estudiar",
       "estado": "pendiente"
+   },
+   {
+      "nombre": "estudiar",
+      "estado": "pendiente"
+   },
+   {
+      "nombre": "estudiar",
+      "estado": "realizado"
+   },
+   {
+      "nombre": "estudiar"
+   },
+   {
+      "nombre": "estudiar"
+   },
+   {
+      "nombre": "estudiar"
    }
 ]
