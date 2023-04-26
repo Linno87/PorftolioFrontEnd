@@ -4,7 +4,7 @@ const argv = require("process").argv;
 
 const accion = argv[2];
 const nombreTarea = argv[3];
-const estadoTarea = argv[4];
+let estadoTarea = argv[4];
 
 
 switch (accion) {
@@ -12,8 +12,14 @@ switch (accion) {
         db.listarJSON()
         break;
     case "agregar":
-        if(nombreTarea===undefined || estadoTarea===undefined){
+        const arrayVeri = ["terminada","en progreso","pendiente", undefined]
+        const boolPertenece = arrayVeri.includes(estadoTarea);
+        if(nombreTarea===undefined || !boolPertenece){
             console.log("Debe ingresar el nombre y el estado de la tarea");
+            if(!boolPertenece){
+                console.log("El estado de la tarea no es válido");
+            }
+            
         }else {
             const tarea ={
                 nombre: nombreTarea,
@@ -25,9 +31,9 @@ switch (accion) {
         }
         break
      case undefined:
-        console.log("Debe ingresar una accion");
+        console.log("Atencion - Tienes que pasar una acción");
         break
     default:
-        console.log("Accion no reconocida");
+        console.log("No entiendo qué quieres hacer");
         break;
 }

@@ -1,31 +1,18 @@
 [
    {
-      "nombre": "Tarea 1",
-      "estado": "pendiente"
+      "nombre": "Trabajo",
+      "estado": "Pendiente"
    },
    {
-      "nombre": "estudiar",
-      "estado": "pendiente"
+      "nombre": "Trabajo",
+      "estado": "EN"
    },
    {
-      "nombre": "estudiar",
-      "estado": "pendiente"
+      "nombre": "Trabajo",
+      "estado": "en progreso"
    },
    {
-      "nombre": "estudiar",
-      "estado": "pendiente"
-   },
-   {
-      "nombre": "estudiar",
-      "estado": "realizado"
-   },
-   {
-      "nombre": "estudiar"
-   },
-   {
-      "nombre": "estudiar"
-   },
-   {
-      "nombre": "estudiar"
+      "nombre": "Trabajo",
+      "estado": "terminada"
    }
 ]
