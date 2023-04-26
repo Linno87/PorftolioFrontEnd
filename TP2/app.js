@@ -1,3 +1,4 @@
+
 const db = require("./app-tareas");
 const argv = require("process").argv;
 
@@ -15,11 +16,20 @@ switch (accion) {
         }
         break;
     case "agregar":
-        const tarea ={
-            nombre: nombreTarea,
-            estado: estadoTarea
+        if([nombreTarea,estadoTarea].length === 0){
+            console.log("Debe ingresar el nombre y el estado de la tarea");
+        }else {
+            const tarea ={
+                nombre: nombreTarea,
+                estado: estadoTarea
+            }
+            console.log(db.guardarJSON(tarea));
         }
-        console.log(db.guardarJSON(tarea));
+        break
+     case undefined:
+        console.log("Debe ingresar una accion");
+        break
     default:
+        console.log("Accion no reconocida");
         break;
 }
