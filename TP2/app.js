@@ -1,5 +1,5 @@
 
-const db = require("./app-tareas");
+const db = require("./app-tareas/funcionesDeTareas");
 const argv = require("process").argv;
 
 const accion = argv[2];
