@@ -6,6 +6,7 @@ const accion = argv[2];
 const nombreTarea = argv[3];
 let estadoTarea = argv[4];
 
+let accionesDisponibles = ["listar","agregar"];
 
 switch (accion) {
     case "listar":
@@ -32,8 +33,10 @@ switch (accion) {
         break
      case undefined:
         console.log("Atencion - Tienes que pasar una acción");
+        console.log("Las acciones disponibes son:"+ accionesDisponibles);
         break
     default:
         console.log("No entiendo qué quieres hacer");
+        console.log("Las acciones disponibes son : "+ accionesDisponibles);
         break;
 }
