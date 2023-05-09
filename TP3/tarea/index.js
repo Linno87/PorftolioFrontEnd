@@ -1,10 +1,10 @@
 const {leerJSON} = require("../data")
 
-module.exports = moduloTarea(
+module.exports = moduloTarea{}
     tareas = leerJSON(),
-    leerTareas ((tareas) =>{
+    leerTareas : tareas =>{
         const arrayTareas = tareas ? this.tareas: tareas
-        
-    })
+
+    }
 )
 

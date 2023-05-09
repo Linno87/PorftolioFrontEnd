@@ -1,9 +1,11 @@
 
-const fs = require('fs');
+const {readFileSync} = require('fs');
+const {writeFileSync} = require("fs")
+const path = require("path")
 
 
 function leerJSON(){
-    let archivo = fs.readFileSync('./app-tareas/tareas.json', 'utf8')
+    let archivo =readFileSync('./app-tareas/tareas.json', 'utf8')
     archivo = parsearJSON(archivo);
     return archivo
 }
